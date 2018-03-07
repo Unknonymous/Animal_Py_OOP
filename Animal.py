@@ -65,9 +65,12 @@ class Dragon(Animal):
         self.health -= 10
 
     # display health: prints health by calling the parent method and prints "I am a Dragon"
-    def displayHealth():
+    def displayHealth(self):
         print ('I am a Dragon!')
-        super(Dragon).displayHealth()
+        super(Dragon, self).displayHealth()
+
+Wyvern = Dragon('Draco', 170)
+Wyvern.displayHealth()
 
 # Now try creating a new Animal and confirm that it can not call the pet() and fly() methods, and its displayHealth() is not saying 'this is a dragon!'. Also confirm that your Dog class can not fly().
 
